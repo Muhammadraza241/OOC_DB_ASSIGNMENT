@@ -36,7 +36,7 @@ public class NormalUserMenu {
                     break;
                 case 2:
                     System.out.println("Option 2: Tax Calculation Operations");
-                    // Add logic for tax-related functionalities
+                    TaxCalculator.calculate_tax();
                     break;
                 case 3:
                     exit = true;
