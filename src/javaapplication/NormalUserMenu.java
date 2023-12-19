@@ -1,23 +1,26 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * This class represents the menu for a normal user with specific options like modifying profile and tax calculations.
  */
 package javaapplication;
+
 import java.util.Scanner;
 
-
 /**
- *
- * @author dev
+ * The NormalUserMenu class provides a menu interface for a normal user.
+ * Options include modifying their profile, performing tax calculation operations, and exiting the menu.
+ * The menu is displayed in a loop until the user chooses to exit.
  */
-
 public class NormalUserMenu {
 
+    /**
+     * Displays the menu options for a normal user and processes user input accordingly.
+     */
     public static void displayMenu() {
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
         String email = CurrentUserManager.getCurrentUserEmail();
 
+        // Display menu loop
         while (!exit) {
             System.out.println("-------------------------------------------------------------------------------");
             System.out.println("Welcome " + email);
@@ -27,8 +30,10 @@ public class NormalUserMenu {
             System.out.println("3. Exit");
             System.out.print("Choose an option: ");
 
+            // Get integer input from user
             int choice = getIntInput(scanner);
 
+            // Process user choice
             switch (choice) {
                 case 1:
                     System.out.println("Option 1: Modifying Your Own Profile");
@@ -49,6 +54,12 @@ public class NormalUserMenu {
         }
     }
 
+    /**
+     * Helper method to validate and get integer input from the user.
+     *
+     * @param scanner The scanner object used for input.
+     * @return The integer input obtained from the user.
+     */
     private static int getIntInput(Scanner scanner) {
         while (!scanner.hasNextInt()) {
             System.out.println("Invalid input. Please enter a number.");

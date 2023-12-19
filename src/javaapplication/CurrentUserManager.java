@@ -2,6 +2,7 @@
  * This class manages the current user's email and provides functionality to determine if the user is an admin.
  */
 package javaapplication;
+
 import java.sql.*;
 
 /**
