@@ -1,22 +1,26 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * This class represents the menu for an admin user with options to manage users and modify own profile.
  */
 package javaapplication;
 
 import java.util.Scanner;
 
 /**
- *
- * @author dev
+ * The AdminUserMenu class provides a menu interface for an admin user.
+ * Options include listing all users, removing a user, modifying own profile, and exiting the system.
+ * The menu is displayed in a loop until the user chooses to exit.
  */
 public class AdminUserMenu {
-    
+
+    /**
+     * Displays the menu for the admin user and processes user input.
+     */
     public static void displayMenu() {
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
         String email = CurrentUserManager.getCurrentUserEmail();
 
+        // Menu loop
         while (!exit) {
             System.out.println("-------------------------------------------------------------------------------");
             System.out.println("Welcome " + email);
@@ -27,10 +31,12 @@ public class AdminUserMenu {
             System.out.println("4. Exit");
             System.out.print("Choose an option: ");
 
+            // Validate user input
             if (scanner.hasNextInt()) {
                 int choice = scanner.nextInt();
                 scanner.nextLine(); // Consume the newline
 
+                // Process user choice
                 switch (choice) {
                     case 1:
                         System.out.println("List of all users selected.");
@@ -57,5 +63,4 @@ public class AdminUserMenu {
             }
         }
     }
-    
 }
