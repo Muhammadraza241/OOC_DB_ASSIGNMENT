@@ -1,13 +1,13 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * This class manages the current user's email and provides functionality to determine if the user is an admin.
  */
 package javaapplication;
+
 import java.sql.*;
 
 /**
- *
- * @author dev
+ * The CurrentUserManager class handles the current user's email and admin status.
+ * It allows setting and retrieving the current user's email and checks if the user is an admin based on the stored email.
  */
 public class CurrentUserManager {
     private static String currentUserEmail;
@@ -16,14 +16,26 @@ public class CurrentUserManager {
     private CurrentUserManager() {
     }
 
+    /**
+     * Sets the current user's email.
+     * @param email The email of the current user.
+     */
     public static void setCurrentUserEmail(String email) {
         currentUserEmail = email;
     }
 
+    /**
+     * Retrieves the current user's email.
+     * @return The email of the current user.
+     */
     public static String getCurrentUserEmail() {
         return currentUserEmail;
     }
-    
+
+    /**
+     * Checks if the current user is an admin by querying the database.
+     * @return true if the current user is an admin, false otherwise.
+     */
     public static boolean isCurrentUserAdmin() {
         // Fetch user role from the database based on the stored email
         String url = "jdbc:mysql://localhost:3306/myDatabase";
@@ -46,6 +58,4 @@ public class CurrentUserManager {
         }
         return false;
     }
-    
-    
 }

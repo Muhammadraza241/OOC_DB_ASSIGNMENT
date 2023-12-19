@@ -59,7 +59,7 @@ public class MainMenu {
         boolean registered = UserRegister.createUserFromConsoleInput();
         if (registered) {
             System.out.println("User registered successfully!");
-            AdminUserMenu.displayMenu();
+            NormalUserMenu.displayMenu();
         } else {
             System.out.println("User registration failed.");
         }
