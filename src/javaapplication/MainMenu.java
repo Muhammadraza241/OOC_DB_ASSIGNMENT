@@ -1,21 +1,26 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * This class represents the main menu of the application,
+ * providing options for user registration, login, and exiting the application.
  */
 package javaapplication;
-import java.util.Scanner;
-/**
- *
- * @author dev
- */
 
+import java.util.Scanner;
+
+/**
+ * The MainMenu class presents the main menu of the application.
+ * It offers options for user registration, login, and exiting the application.
+ * Users can navigate through these options using user input.
+ */
 public class MainMenu {
 
+    /**
+     * Displays the main menu and processes user input to perform actions accordingly.
+     */
     public static void menu() {
         Scanner scanner = new Scanner(System.in);
-
         boolean exit = false;
 
+        // Main menu loop
         while (!exit) {
             System.out.println("-------------------------------------------------------------------------------");
             System.out.println("Welcome to our Application");
@@ -25,10 +30,12 @@ public class MainMenu {
             System.out.println("3. Exit");
             System.out.print("Choose an option: ");
 
+            // Validate user input
             if (scanner.hasNextInt()) {
                 int choice = scanner.nextInt();
                 scanner.nextLine(); // Consume the newline character after reading the integer
 
+                // Process user choice
                 switch (choice) {
                     case 1:
                         registerUser();
@@ -51,6 +58,9 @@ public class MainMenu {
         }
     }
     
+    /**
+     * Handles the registration process for a new user.
+     */
     private static void registerUser() {
         System.out.println("-------------------------------------------------------------------------------");
         System.out.println("Please enter the below details to register a new user...");
@@ -65,6 +75,9 @@ public class MainMenu {
         }
     }
 
+    /**
+     * Handles the login process for an existing user.
+     */
     private static void loginUser() {
         System.out.println("-------------------------------------------------------------------------------");
         System.out.println("Please enter the below details to login a new user...");
@@ -82,6 +95,5 @@ public class MainMenu {
         } else {
             System.out.println("Login failed. Invalid email or password.");
         }
-        
     }
 }
