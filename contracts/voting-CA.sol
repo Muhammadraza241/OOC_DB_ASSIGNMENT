@@ -22,4 +22,5 @@ contract Voting {
 
     // Variable to track the total number of votes cast in the election
     uint public totalVotes;
+    
 }

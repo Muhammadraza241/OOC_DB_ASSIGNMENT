@@ -108,11 +108,11 @@
 	},
 	"sources": {
 		"contracts/voting-CA.sol": {
-			"keccak256": "0x0a3ac25a6ad5ffa25bc2e22cb83ce1514b0f7178d6c445f3c3d31910e6a99fc2",
+			"keccak256": "0x8f76190106c2420ae36b07f7e33fe861074b3da9f02e21913f292a5bea69b64a",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c119508e342fe352d3ca8a6d5fc14923affa645bb742a78f7d06140bbe778341",
-				"dweb:/ipfs/QmZoVEn5A7FaXmU1vfhFzFGCjp6WjATJf3jBxBpb9XHTWb"
+				"bzz-raw://16434421497016b21c72779ef91d8d254f8e770d01f0758ab6cb8e05deefe105",
+				"dweb:/ipfs/QmVa6y1rQZ73VVNh14X97x8dhJTDvoQGwXezWwiBVGQBHF"
 			]
 		}
 	},
